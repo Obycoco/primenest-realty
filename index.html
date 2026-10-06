@@ -1,223 +1,364 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PrimeNest Realty | Find Your Dream Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<title>PrimeNest Realty | Luxury Real Estate</title>
 
-    body {
-      font-family: Arial, sans-serif;
-      color: #1b2638;
-      background: #f7f8fa;
-      line-height: 1.6;
-    }
+<meta name="description" content="PrimeNest Realty helps you discover exceptional homes and properties across the United States.">
 
-    header {
-      background: #0d1b2a;
-      color: white;
-      padding: 18px 6%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-    }
+html{
+  scroll-behavior:smooth;
+}
 
-    .logo span {
-      color: #d4af37;
-    }
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  color:#172033;
+  background:#ffffff;
+  line-height:1.6;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 25px;
-      font-size: 15px;
-    }
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:#ffffff;
+  border-bottom:1px solid #e8e8e8;
+}
 
-    nav a:hover {
-      color: #d4af37;
-    }
+.navbar{
+  max-width:1200px;
+  margin:auto;
+  padding:18px 25px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
 
-    .hero {
-      min-height: 600px;
-      background:
-        linear-gradient(rgba(13,27,42,.65), rgba(13,27,42,.65)),
-        url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=80")
-        center/cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      padding: 40px 20px;
-    }
+.logo{
+  font-size:25px;
+  font-weight:700;
+  color:#14213d;
+}
 
-    .hero-content {
-      max-width: 800px;
-    }
+.logo span{
+  color:#b58b2a;
+}
 
-    .hero h1 {
-      font-size: 52px;
-      margin-bottom: 20px;
-    }
+nav a{
+  color:#172033;
+  text-decoration:none;
+  margin-left:28px;
+  font-size:15px;
+  font-weight:600;
+}
 
-    .hero p {
-      font-size: 20px;
-      margin-bottom: 30px;
-    }
+nav a:hover{
+  color:#b58b2a;
+}
 
-    .btn {
-      display: inline-block;
-      background: #d4af37;
-      color: #111;
-      padding: 14px 28px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+.hero{
+  min-height:650px;
+  display:flex;
+  align-items:center;
+  background:
+    linear-gradient(rgba(10,20,35,.62),rgba(10,20,35,.62)),
+    url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=85")
+    center/cover;
+}
 
-    section {
-      padding: 75px 6%;
-    }
+.hero-content{
+  max-width:1200px;
+  width:100%;
+  margin:auto;
+  padding:80px 25px;
+  color:#ffffff;
+}
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 45px;
-    }
+.hero-content h1{
+  max-width:750px;
+  font-size:60px;
+  line-height:1.08;
+  margin-bottom:22px;
+}
 
-    .section-title h2 {
-      font-size: 36px;
-      color: #0d1b2a;
-      margin-bottom: 10px;
-    }
+.hero-content p{
+  max-width:650px;
+  font-size:20px;
+  margin-bottom:35px;
+  color:#f2f2f2;
+}
 
-    .section-title p {
-      color: #687385;
-    }
+.btn{
+  display:inline-block;
+  padding:14px 25px;
+  background:#b58b2a;
+  color:#ffffff;
+  text-decoration:none;
+  border-radius:4px;
+  font-weight:700;
+}
 
-    .properties {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
-    }
+.btn:hover{
+  background:#94701f;
+}
 
-    .property {
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 5px 20px rgba(0,0,0,.08);
-    }
+.search-box{
+  max-width:1050px;
+  margin:-45px auto 0;
+  position:relative;
+  z-index:10;
+  background:#ffffff;
+  padding:25px;
+  border-radius:8px;
+  box-shadow:0 10px 35px rgba(0,0,0,.15);
+}
 
-    .property img {
-      width: 100%;
-      height: 230px;
-      object-fit: cover;
-    }
+.search-box h3{
+  margin-bottom:18px;
+  color:#14213d;
+}
 
-    .property-content {
-      padding: 22px;
-    }
+.search-fields{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr auto;
+  gap:12px;
+}
 
-    .property h3 {
-      font-size: 21px;
-      margin-bottom: 8px;
-    }
+.search-fields input,
+.search-fields select{
+  width:100%;
+  padding:14px;
+  border:1px solid #d8dce2;
+  border-radius:4px;
+  font-size:14px;
+}
 
-    .location {
-      color: #687385;
-      margin-bottom: 12px;
-    }
+.search-button{
+  border:none;
+  background:#14213d;
+  color:#ffffff;
+  padding:14px 25px;
+  border-radius:4px;
+  font-weight:bold;
+  cursor:pointer;
+}
 
-    .price {
-      color: #b18a19;
-      font-size: 22px;
-      font-weight: bold;
-      margin-bottom: 15px;
-    }
+.search-button:hover{
+  background:#0b1526;
+}
 
-    .details {
-      color: #555;
-      font-size: 14px;
-      margin-bottom: 20px;
-    }
+section{
+  padding:90px 25px;
+}
 
-    .about {
-      background: white;
-    }
+.container{
+  max-width:1200px;
+  margin:auto;
+}
 
-    .about-content {
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
-    }
+.section-heading{
+  text-align:center;
+  margin-bottom:50px;
+}
 
-    .about-content p {
-      color: #596474;
-      font-size: 17px;
-      margin-bottom: 20px;
-    }
+.section-heading h2{
+  font-size:38px;
+  color:#14213d;
+  margin-bottom:10px;
+}
 
-    .contact {
-      background: #0d1b2a;
-      color: white;
-      text-align: center;
-    }
+.section-heading p{
+  color:#697386;
+}
 
-    .contact h2 {
-      font-size: 36px;
-      margin-bottom: 15px;
-    }
+.properties{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
+}
 
-    .contact p {
-      margin-bottom: 25px;
-    }
+.property{
+  background:#ffffff;
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow:0 6px 25px rgba(0,0,0,.08);
+  transition:.25s;
+}
 
-    footer {
-      background: #08121d;
-      color: #aaa;
-      text-align: center;
-      padding: 25px;
-      font-size: 14px;
-    }
+.property:hover{
+  transform:translateY(-5px);
+  box-shadow:0 12px 30px rgba(0,0,0,.13);
+}
 
-    @media (max-width: 800px) {
-      header {
-        flex-direction: column;
-        gap: 15px;
-      }
+.property img{
+  width:100%;
+  height:245px;
+  object-fit:cover;
+}
 
-      nav a {
-        margin: 0 8px;
-      }
+.property-info{
+  padding:24px;
+}
 
-      .hero h1 {
-        font-size: 38px;
-      }
+.property-info h3{
+  color:#14213d;
+  font-size:21px;
+  margin-bottom:7px;
+}
 
-      .properties {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+.location{
+  color:#727b88;
+  font-size:14px;
+  margin-bottom:14px;
+}
+
+.price{
+  color:#b58b2a;
+  font-size:23px;
+  font-weight:bold;
+  margin-bottom:10px;
+}
+
+.features{
+  color:#596474;
+  font-size:14px;
+  margin-bottom:20px;
+}
+
+.about{
+  background:#f5f6f8;
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.about-image img{
+  width:100%;
+  border-radius:8px;
+}
+
+.about-text h2{
+  font-size:40px;
+  color:#14213d;
+  margin-bottom:20px;
+}
+
+.about-text p{
+  color:#5d6877;
+  margin-bottom:18px;
+}
+
+.features-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+  margin-top:40px;
+}
+
+.feature{
+  text-align:center;
+  padding:25px;
+  border:1px solid #e5e7eb;
+  border-radius:7px;
+}
+
+.feature h3{
+  color:#14213d;
+  margin-bottom:8px;
+}
+
+.feature p{
+  color:#6c7582;
+  font-size:14px;
+}
+
+.contact{
+  background:#14213d;
+  color:#ffffff;
+  text-align:center;
+}
+
+.contact h2{
+  font-size:40px;
+  margin-bottom:15px;
+}
+
+.contact p{
+  max-width:650px;
+  margin:0 auto 30px;
+  color:#d9dee7;
+}
+
+.contact-info{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  flex-wrap:wrap;
+  margin-bottom:30px;
+}
+
+footer{
+  background:#0b1422;
+  color:#aeb6c2;
+  text-align:center;
+  padding:25px;
+  font-size:14px;
+}
+
+@media(max-width:850px){
+
+  nav{
+    display:none;
+  }
+
+  .hero{
+    min-height:560px;
+  }
+
+  .hero-content h1{
+    font-size:42px;
+  }
+
+  .search-fields{
+    grid-template-columns:1fr;
+  }
+
+  .properties{
+    grid-template-columns:1fr;
+  }
+
+  .about-grid{
+    grid-template-columns:1fr;
+  }
+
+  .features-grid{
+    grid-template-columns:1fr;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <div class="logo">PrimeNest <span>Realty</span></div>
+<header>
+  <div class="navbar">
+
+    <div class="logo">
+      PrimeNest <span>Realty</span>
+    </div>
 
     <nav>
       <a href="#home">Home</a>
@@ -225,93 +366,259 @@
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
-  </header>
 
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <h1>Find Your Dream Home</h1>
-      <p>
-        Discover beautiful homes and properties in locations you'll love.
-      </p>
-      <a href="#properties" class="btn">View Properties</a>
-    </div>
-  </section>
+  </div>
+</header>
 
-  <section id="properties">
-    <div class="section-title">
+<section class="hero" id="home">
+
+  <div class="hero-content">
+
+    <h1>Find a Place You'll Be Proud to Call Home</h1>
+
+    <p>
+      Discover exceptional homes, apartments, and investment properties
+      with PrimeNest Realty.
+    </p>
+
+    <a href="#properties" class="btn">Explore Properties</a>
+
+  </div>
+
+</section>
+
+<div class="search-box">
+
+  <h3>Find Your Property</h3>
+
+  <div class="search-fields">
+
+    <input type="text" id="location" placeholder="City or location">
+
+    <select id="type">
+      <option value="">Property Type</option>
+      <option>House</option>
+      <option>Apartment</option>
+      <option>Villa</option>
+      <option>Condo</option>
+    </select>
+
+    <select id="price">
+      <option value="">Price Range</option>
+      <option>Under $300,000</option>
+      <option>$300,000 - $500,000</option>
+      <option>$500,000 - $1,000,000</option>
+      <option>$1,000,000+</option>
+    </select>
+
+    <button class="search-button" onclick="searchProperty()">Search</button>
+
+  </div>
+
+</div>
+
+<section id="properties">
+
+  <div class="container">
+
+    <div class="section-heading">
       <h2>Featured Properties</h2>
-      <p>Explore some of our available properties.</p>
+      <p>Explore selected properties available through PrimeNest Realty.</p>
     </div>
 
     <div class="properties">
 
       <div class="property">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80" alt="Modern Family Home">
 
-        <div class="property-content">
+        <img
+          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=85"
+          alt="Modern family home">
+
+        <div class="property-info">
+
           <h3>Modern Family Home</h3>
+
           <div class="location">Miami, Florida</div>
+
           <div class="price">$450,000</div>
-          <div class="details">4 Bedrooms · 3 Bathrooms · 2,400 sq ft</div>
-          <a href="#contact" class="btn">Inquire Now</a>
+
+          <div class="features">
+            4 Bedrooms · 3 Bathrooms · 2,400 sq ft
+          </div>
+
+          <a href="#contact" class="btn">Request Details</a>
+
         </div>
+
       </div>
 
       <div class="property">
-        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80" alt="Luxury Apartment">
 
-        <div class="property-content">
+        <img
+          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85"
+          alt="Luxury apartment">
+
+        <div class="property-info">
+
           <h3>Luxury Apartment</h3>
+
           <div class="location">Los Angeles, California</div>
+
           <div class="price">$325,000</div>
-          <div class="details">2 Bedrooms · 2 Bathrooms · 1,450 sq ft</div>
-          <a href="#contact" class="btn">Inquire Now</a>
+
+          <div class="features">
+            2 Bedrooms · 2 Bathrooms · 1,450 sq ft
+          </div>
+
+          <a href="#contact" class="btn">Request Details</a>
+
         </div>
+
       </div>
 
       <div class="property">
-        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=900&q=80" alt="Luxury Villa">
 
-        <div class="property-content">
+        <img
+          src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1000&q=85"
+          alt="Luxury villa">
+
+        <div class="property-info">
+
           <h3>Luxury Villa</h3>
+
           <div class="location">Orlando, Florida</div>
+
           <div class="price">$750,000</div>
-          <div class="details">5 Bedrooms · 4 Bathrooms · 3,200 sq ft</div>
-          <a href="#contact" class="btn">Inquire Now</a>
+
+          <div class="features">
+            5 Bedrooms · 4 Bathrooms · 3,200 sq ft
+          </div>
+
+          <a href="#contact" class="btn">Request Details</a>
+
         </div>
+
       </div>
 
     </div>
-  </section>
 
-  <section class="about" id="about">
-    <div class="section-title">
-      <h2>Why Choose PrimeNest Realty?</h2>
+  </div>
+
+</section>
+
+<section class="about" id="about">
+
+  <div class="container">
+
+    <div class="about-grid">
+
+      <div class="about-image">
+
+        <img
+          src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=85"
+          alt="Real estate professional">
+
+      </div>
+
+      <div class="about-text">
+
+        <h2>Real Estate With a Higher Standard</h2>
+
+        <p>
+          PrimeNest Realty is dedicated to helping buyers, sellers,
+          and investors navigate the real estate market with confidence.
+        </p>
+
+        <p>
+          We believe finding the right property should be clear,
+          professional, and focused on your goals.
+        </p>
+
+        <a href="#contact" class="btn">Speak With Us</a>
+
+      </div>
+
     </div>
 
-    <div class="about-content">
-      <p>
-        PrimeNest Realty is focused on helping buyers and sellers
-        find the right property with confidence.
-      </p>
+    <div class="features-grid">
 
-      <p>
-        Whether you're searching for a family home, luxury apartment,
-        investment property, or your next dream residence, we're here
-        to make the process simple and professional.
-      </p>
+      <div class="feature">
+        <h3>Trusted Service</h3>
+        <p>Professional guidance throughout your property journey.</p>
+      </div>
+
+      <div class="feature">
+        <h3>Quality Properties</h3>
+        <p>Carefully presented homes and properties for your consideration.</p>
+      </div>
+
+      <div class="feature">
+        <h3>Client Focused</h3>
+        <p>Your property goals remain at the center of every conversation.</p>
+      </div>
+
     </div>
-  </section>
 
-  <section class="contact" id="contact">
-    <h2>Ready to Find Your New Home?</h2>
-    <p>Contact PrimeNest Realty today to learn more about our properties.</p>
-    <a class="btn" href="mailto:info@primenestrealty.com">Contact Us</a>
-  </section>
+  </div>
 
-  <footer>
-    © 2026 PrimeNest Realty. All Rights Reserved.
-  </footer>
+</section>
+
+<section class="contact" id="contact">
+
+  <div class="container">
+
+    <h2>Ready to Find Your Next Property?</h2>
+
+    <p>
+      Tell us what you're looking for and our team can help you
+      take the next step.
+    </p>
+
+    <div class="contact-info">
+      <div>📧 info@primenestrealty.com</div>
+      <div>📞 (305) 555-0198</div>
+    </div>
+
+    <a
+      class="btn"
+      href="mailto:info@primenestrealty.com?subject=Property Inquiry">
+      Contact PrimeNest Realty
+    </a>
+
+  </div>
+
+</section>
+
+<footer>
+  © 2026 PrimeNest Realty. All Rights Reserved.
+</footer>
+
+<script>
+
+function searchProperty(){
+
+  const location =
+    document.getElementById("location").value.trim();
+
+  const type =
+    document.getElementById("type").value;
+
+  const price =
+    document.getElementById("price").value;
+
+  if(!location && !type && !price){
+
+    alert("Please select a location, property type, or price range.");
+
+    return;
+  }
+
+  alert(
+    "Thank you for your search. PrimeNest Realty will help you find matching properties."
+  );
+}
+
+</script>
 
 </body>
 </html>
