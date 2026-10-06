@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PrimeNest Realty | Find Your Dream Home</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #1b2638;
+      background: #f7f8fa;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #0d1b2a;
+      color: white;
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #d4af37;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      color: #d4af37;
+    }
+
+    .hero {
+      min-height: 600px;
+      background:
+        linear-gradient(rgba(13,27,42,.65), rgba(13,27,42,.65)),
+        url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=80")
+        center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 40px 20px;
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #d4af37;
+      color: #111;
+      padding: 14px 28px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 75px 6%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 36px;
+      color: #0d1b2a;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #687385;
+    }
+
+    .properties {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .property {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,.08);
+    }
+
+    .property img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+    }
+
+    .property-content {
+      padding: 22px;
+    }
+
+    .property h3 {
+      font-size: 21px;
+      margin-bottom: 8px;
+    }
+
+    .location {
+      color: #687385;
+      margin-bottom: 12px;
+    }
+
+    .price {
+      color: #b18a19;
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .details {
+      color: #555;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .about {
+      background: white;
+    }
+
+    .about-content {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about-content p {
+      color: #596474;
+      font-size: 17px;
+      margin-bottom: 20px;
+    }
+
+    .contact {
+      background: #0d1b2a;
+      color: white;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .contact p {
+      margin-bottom: 25px;
+    }
+
+    footer {
+      background: #08121d;
+      color: #aaa;
+      text-align: center;
+      padding: 25px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 800px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav a {
+        margin: 0 8px;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .properties {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">PrimeNest <span>Realty</span></div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#properties">Properties</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Find Your Dream Home</h1>
+      <p>
+        Discover beautiful homes and properties in locations you'll love.
+      </p>
+      <a href="#properties" class="btn">View Properties</a>
+    </div>
+  </section>
+
+  <section id="properties">
+    <div class="section-title">
+      <h2>Featured Properties</h2>
+      <p>Explore some of our available properties.</p>
+    </div>
+
+    <div class="properties">
+
+      <div class="property">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80" alt="Modern Family Home">
+
+        <div class="property-content">
+          <h3>Modern Family Home</h3>
+          <div class="location">Miami, Florida</div>
+          <div class="price">$450,000</div>
+          <div class="details">4 Bedrooms · 3 Bathrooms · 2,400 sq ft</div>
+          <a href="#contact" class="btn">Inquire Now</a>
+        </div>
+      </div>
+
+      <div class="property">
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80" alt="Luxury Apartment">
+
+        <div class="property-content">
+          <h3>Luxury Apartment</h3>
+          <div class="location">Los Angeles, California</div>
+          <div class="price">$325,000</div>
+          <div class="details">2 Bedrooms · 2 Bathrooms · 1,450 sq ft</div>
+          <a href="#contact" class="btn">Inquire Now</a>
+        </div>
+      </div>
+
+      <div class="property">
+        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=900&q=80" alt="Luxury Villa">
+
+        <div class="property-content">
+          <h3>Luxury Villa</h3>
+          <div class="location">Orlando, Florida</div>
+          <div class="price">$750,000</div>
+          <div class="details">5 Bedrooms · 4 Bathrooms · 3,200 sq ft</div>
+          <a href="#contact" class="btn">Inquire Now</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="section-title">
+      <h2>Why Choose PrimeNest Realty?</h2>
+    </div>
+
+    <div class="about-content">
+      <p>
+        PrimeNest Realty is focused on helping buyers and sellers
+        find the right property with confidence.
+      </p>
+
+      <p>
+        Whether you're searching for a family home, luxury apartment,
+        investment property, or your next dream residence, we're here
+        to make the process simple and professional.
+      </p>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Ready to Find Your New Home?</h2>
+    <p>Contact PrimeNest Realty today to learn more about our properties.</p>
+    <a class="btn" href="mailto:info@primenestrealty.com">Contact Us</a>
+  </section>
+
+  <footer>
+    © 2026 PrimeNest Realty. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
