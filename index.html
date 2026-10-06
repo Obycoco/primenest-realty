@@ -4,11 +4,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>PrimeNest Realty | Luxury Real Estate</title>
+<title>PrimeNest Realty | Exceptional Real Estate</title>
 
-<meta name="description" content="PrimeNest Realty helps you discover exceptional homes and properties across the United States.">
+<meta name="description" content="PrimeNest Realty helps buyers, sellers and investors discover exceptional properties and real estate opportunities.">
 
 <style>
+:root{
+  --navy:#101d32;
+  --navy2:#172942;
+  --gold:#b99545;
+  --gold-dark:#96762f;
+  --white:#ffffff;
+  --light:#f5f6f8;
+  --text:#243044;
+  --muted:#697386;
+  --border:#e2e5ea;
+  --shadow:0 12px 35px rgba(16,29,50,.10);
+}
+
 *{
   margin:0;
   padding:0;
@@ -20,24 +33,37 @@ html{
 }
 
 body{
-  font-family:Arial, Helvetica, sans-serif;
-  color:#172033;
-  background:#ffffff;
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--text);
+  background:#fff;
   line-height:1.6;
 }
+
+a{
+  text-decoration:none;
+}
+
+button,
+input,
+select,
+textarea{
+  font:inherit;
+}
+
+/* NAVIGATION */
 
 header{
   position:sticky;
   top:0;
   z-index:1000;
-  background:#ffffff;
-  border-bottom:1px solid #e8e8e8;
+  background:#fff;
+  border-bottom:1px solid var(--border);
 }
 
 .navbar{
-  max-width:1200px;
+  max-width:1250px;
   margin:auto;
-  padding:18px 25px;
+  padding:17px 25px;
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -45,116 +71,150 @@ header{
 
 .logo{
   font-size:25px;
-  font-weight:700;
-  color:#14213d;
+  font-weight:800;
+  color:var(--navy);
 }
 
 .logo span{
-  color:#b58b2a;
+  color:var(--gold);
+}
+
+nav{
+  display:flex;
+  align-items:center;
+  gap:27px;
 }
 
 nav a{
-  color:#172033;
-  text-decoration:none;
-  margin-left:28px;
-  font-size:15px;
+  color:var(--navy);
+  font-size:14px;
   font-weight:600;
 }
 
 nav a:hover{
-  color:#b58b2a;
+  color:var(--gold);
 }
+
+.nav-button{
+  background:var(--navy);
+  color:#fff!important;
+  padding:11px 18px;
+  border-radius:4px;
+}
+
+/* HERO */
 
 .hero{
   min-height:650px;
   display:flex;
   align-items:center;
   background:
-    linear-gradient(rgba(10,20,35,.62),rgba(10,20,35,.62)),
-    url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=85")
+    linear-gradient(rgba(8,18,33,.64),rgba(8,18,33,.64)),
+    url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2200&q=90")
     center/cover;
 }
 
 .hero-content{
-  max-width:1200px;
   width:100%;
+  max-width:1250px;
   margin:auto;
   padding:80px 25px;
-  color:#ffffff;
+  color:#fff;
 }
 
 .hero-content h1{
-  max-width:750px;
-  font-size:60px;
-  line-height:1.08;
+  max-width:780px;
+  font-size:62px;
+  line-height:1.06;
   margin-bottom:22px;
 }
 
 .hero-content p{
-  max-width:650px;
+  max-width:670px;
   font-size:20px;
-  margin-bottom:35px;
-  color:#f2f2f2;
+  color:#f0f2f5;
+  margin-bottom:32px;
 }
 
-.btn{
+.primary-btn{
   display:inline-block;
-  padding:14px 25px;
-  background:#b58b2a;
-  color:#ffffff;
-  text-decoration:none;
+  background:var(--gold);
+  color:#fff;
+  padding:14px 24px;
   border-radius:4px;
   font-weight:700;
+  border:none;
+  cursor:pointer;
 }
 
-.btn:hover{
-  background:#94701f;
+.primary-btn:hover{
+  background:var(--gold-dark);
+}
+
+.secondary-btn{
+  display:inline-block;
+  border:1px solid #fff;
+  color:#fff;
+  padding:13px 24px;
+  border-radius:4px;
+  font-weight:700;
+  margin-left:10px;
+}
+
+/* SEARCH */
+
+.search-wrapper{
+  max-width:1100px;
+  margin:-55px auto 0;
+  position:relative;
+  z-index:10;
+  padding:0 20px;
 }
 
 .search-box{
-  max-width:1050px;
-  margin:-45px auto 0;
-  position:relative;
-  z-index:10;
-  background:#ffffff;
-  padding:25px;
+  background:#fff;
+  padding:28px;
   border-radius:8px;
-  box-shadow:0 10px 35px rgba(0,0,0,.15);
+  box-shadow:var(--shadow);
 }
 
-.search-box h3{
+.search-title{
+  color:var(--navy);
   margin-bottom:18px;
-  color:#14213d;
+  font-size:20px;
 }
 
 .search-fields{
   display:grid;
-  grid-template-columns:2fr 1fr 1fr auto;
-  gap:12px;
+  grid-template-columns:1.7fr 1fr 1fr 1fr auto;
+  gap:10px;
 }
 
 .search-fields input,
 .search-fields select{
   width:100%;
-  padding:14px;
-  border:1px solid #d8dce2;
+  padding:13px;
+  border:1px solid var(--border);
   border-radius:4px;
-  font-size:14px;
+  background:#fff;
+  color:var(--text);
 }
 
-.search-button{
+.search-btn{
+  background:var(--navy);
+  color:#fff;
   border:none;
-  background:#14213d;
-  color:#ffffff;
-  padding:14px 25px;
+  padding:13px 22px;
   border-radius:4px;
-  font-weight:bold;
   cursor:pointer;
+  font-weight:700;
 }
 
-.search-button:hover{
-  background:#0b1526;
+.search-btn:hover{
+  background:var(--navy2);
 }
+
+/* GENERAL */
 
 section{
   padding:90px 25px;
@@ -167,18 +227,57 @@ section{
 
 .section-heading{
   text-align:center;
-  margin-bottom:50px;
+  margin-bottom:48px;
 }
 
 .section-heading h2{
-  font-size:38px;
-  color:#14213d;
+  color:var(--navy);
+  font-size:39px;
   margin-bottom:10px;
 }
 
 .section-heading p{
-  color:#697386;
+  color:var(--muted);
 }
+
+/* QUICK LINKS */
+
+.quick-links{
+  padding:35px 25px;
+}
+
+.quick-grid{
+  max-width:1000px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.quick-card{
+  border:1px solid var(--border);
+  padding:24px;
+  border-radius:6px;
+  text-align:center;
+  transition:.2s;
+}
+
+.quick-card:hover{
+  transform:translateY(-3px);
+  box-shadow:var(--shadow);
+}
+
+.quick-card h3{
+  color:var(--navy);
+  margin-bottom:5px;
+}
+
+.quick-card p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* PROPERTIES */
 
 .properties{
   display:grid;
@@ -187,55 +286,110 @@ section{
 }
 
 .property{
-  background:#ffffff;
-  border-radius:8px;
+  background:#fff;
+  border-radius:7px;
   overflow:hidden;
-  box-shadow:0 6px 25px rgba(0,0,0,.08);
+  box-shadow:0 6px 25px rgba(16,29,50,.09);
   transition:.25s;
 }
 
 .property:hover{
   transform:translateY(-5px);
-  box-shadow:0 12px 30px rgba(0,0,0,.13);
+  box-shadow:0 15px 35px rgba(16,29,50,.15);
 }
 
-.property img{
+.property-image{
+  position:relative;
+}
+
+.property-image img{
   width:100%;
-  height:245px;
+  height:240px;
+  display:block;
   object-fit:cover;
 }
 
+.badge{
+  position:absolute;
+  top:15px;
+  left:15px;
+  background:var(--gold);
+  color:#fff;
+  padding:6px 11px;
+  border-radius:3px;
+  font-size:12px;
+  font-weight:bold;
+}
+
 .property-info{
-  padding:24px;
+  padding:23px;
 }
 
 .property-info h3{
-  color:#14213d;
+  color:var(--navy);
   font-size:21px;
-  margin-bottom:7px;
+  margin-bottom:5px;
 }
 
 .location{
-  color:#727b88;
+  color:var(--muted);
   font-size:14px;
-  margin-bottom:14px;
+  margin-bottom:12px;
 }
 
 .price{
-  color:#b58b2a;
+  color:var(--gold-dark);
   font-size:23px;
-  font-weight:bold;
+  font-weight:800;
   margin-bottom:10px;
 }
 
-.features{
-  color:#596474;
-  font-size:14px;
-  margin-bottom:20px;
+.property-meta{
+  color:#5e6877;
+  font-size:13px;
+  margin-bottom:18px;
 }
 
+.property-buttons{
+  display:flex;
+  gap:8px;
+}
+
+.details-btn{
+  flex:1;
+  border:1px solid var(--navy);
+  background:#fff;
+  color:var(--navy);
+  padding:10px;
+  border-radius:4px;
+  cursor:pointer;
+  font-weight:700;
+}
+
+.inquire-btn{
+  flex:1;
+  border:none;
+  background:var(--navy);
+  color:#fff;
+  padding:10px;
+  border-radius:4px;
+  cursor:pointer;
+  font-weight:700;
+}
+
+/* NO RESULTS */
+
+.no-results{
+  display:none;
+  text-align:center;
+  padding:35px;
+  color:var(--muted);
+}
+
+/* ABOUT */
+
 .about{
-  background:#f5f6f8;
+  background:var(--light);
 }
 
 .about-grid{
@@ -247,105 +401,470 @@ section{
 
 .about-image img{
   width:100%;
-  border-radius:8px;
+  border-radius:7px;
 }
 
 .about-text h2{
-  font-size:40px;
-  color:#14213d;
+  font-size:42px;
+  color:var(--navy);
+  line-height:1.15;
   margin-bottom:20px;
 }
 
 .about-text p{
-  color:#5d6877;
-  margin-bottom:18px;
+  color:#606b79;
+  margin-bottom:17px;
 }
 
-.features-grid{
+/* SERVICES */
+
+.services{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:25px;
-  margin-top:40px;
+  gap:22px;
 }
 
-.feature{
-  text-align:center;
-  padding:25px;
-  border:1px solid #e5e7eb;
+.service{
+  padding:30px;
+  border:1px solid var(--border);
   border-radius:7px;
 }
 
-.feature h3{
-  color:#14213d;
-  margin-bottom:8px;
+.service-number{
+  color:var(--gold);
+  font-weight:800;
+  font-size:13px;
+  margin-bottom:12px;
 }
 
-.feature p{
-  color:#6c7582;
+.service h3{
+  color:var(--navy);
+  margin-bottom:10px;
+}
+
+.service p{
+  color:var(--muted);
   font-size:14px;
 }
 
-.contact{
-  background:#14213d;
-  color:#ffffff;
-  text-align:center;
+/* WHY US */
+
+.why-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
 }
 
-.contact h2{
+.why-card{
+  text-align:center;
+  padding:28px;
+}
+
+.why-card .icon{
+  font-size:30px;
+  margin-bottom:12px;
+}
+
+.why-card h3{
+  color:var(--navy);
+  margin-bottom:8px;
+}
+
+.why-card p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* TESTIMONIALS */
+
+.testimonials{
+  background:var(--light);
+}
+
+.testimonial-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.testimonial{
+  background:#fff;
+  padding:28px;
+  border-radius:7px;
+  box-shadow:0 5px 20px rgba(0,0,0,.05);
+}
+
+.stars{
+  color:var(--gold);
+  margin-bottom:13px;
+}
+
+.testimonial p{
+  color:#5f6875;
+  font-size:15px;
+  margin-bottom:15px;
+}
+
+.testimonial strong{
+  color:var(--navy);
+  font-size:14px;
+}
+
+.demo-note{
+  text-align:center;
+  margin-top:25px;
+  color:#8a929e;
+  font-size:12px;
+}
+
+/* FAQ */
+
+.faq{
+  max-width:850px;
+  margin:auto;
+}
+
+.faq-item{
+  border-bottom:1px solid var(--border);
+}
+
+.faq-question{
+  width:100%;
+  padding:20px 0;
+  border:none;
+  background:none;
+  display:flex;
+  justify-content:space-between;
+  cursor:pointer;
+  color:var(--navy);
+  font-weight:700;
+  text-align:left;
+}
+
+.faq-answer{
+  display:none;
+  padding:0 0 20px;
+  color:var(--muted);
+  font-size:14px;
+}
+
+.faq-item.active .faq-answer{
+  display:block;
+}
+
+/* CALCULATOR */
+
+.calculator{
+  background:var(--navy);
+  color:#fff;
+}
+
+.calculator-box{
+  max-width:850px;
+  margin:auto;
+  background:#fff;
+  color:var(--text);
+  padding:30px;
+  border-radius:8px;
+}
+
+.calculator-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+
+.calculator label{
+  display:block;
+  color:var(--navy);
+  font-size:13px;
+  font-weight:bold;
+  margin-bottom:6px;
+}
+
+.calculator input{
+  width:100%;
+  padding:12px;
+  border:1px solid var(--border);
+  border-radius:4px;
+}
+
+.calculator-result{
+  margin-top:22px;
+  padding:18px;
+  background:var(--light);
+  border-radius:5px;
+  text-align:center;
+  color:var(--navy);
+  font-weight:bold;
+}
+
+/* CONTACT */
+
+.contact{
+  background:#f5f6f8;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+}
+
+.contact-copy h2{
+  color:var(--navy);
   font-size:40px;
   margin-bottom:15px;
 }
 
-.contact p{
-  max-width:650px;
-  margin:0 auto 30px;
-  color:#d9dee7;
+.contact-copy p{
+  color:var(--muted);
+  margin-bottom:20px;
 }
 
-.contact-info{
-  display:flex;
-  justify-content:center;
-  gap:40px;
-  flex-wrap:wrap;
-  margin-bottom:30px;
+.contact-form{
+  background:#fff;
+  padding:28px;
+  border-radius:7px;
+  box-shadow:var(--shadow);
 }
+
+.form-group{
+  margin-bottom:15px;
+}
+
+.form-group label{
+  display:block;
+  color:var(--navy);
+  font-size:13px;
+  font-weight:bold;
+  margin-bottom:6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+  width:100%;
+  padding:12px;
+  border:1px solid var(--border);
+  border-radius:4px;
+}
+
+.form-group textarea{
+  min-height:120px;
+  resize:vertical;
+}
+
+.form-submit{
+  width:100%;
+}
+
+/* MODAL */
+
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.72);
+  z-index:2000;
+  padding:30px 15px;
+  overflow:auto;
+}
+
+.modal-box{
+  max-width:850px;
+  margin:40px auto;
+  background:#fff;
+  border-radius:8px;
+  overflow:hidden;
+  position:relative;
+}
+
+.modal-box img{
+  width:100%;
+  height:350px;
+  object-fit:cover;
+}
+
+.modal-content{
+  padding:28px;
+}
+
+.modal-content h2{
+  color:var(--navy);
+  margin-bottom:7px;
+}
+
+.modal-price{
+  color:var(--gold-dark);
+  font-size:24px;
+  font-weight:bold;
+  margin:12px 0;
+}
+
+.modal-close{
+  position:absolute;
+  top:12px;
+  right:15px;
+  width:38px;
+  height:38px;
+  border:none;
+  border-radius:50%;
+  background:#fff;
+  color:var(--navy);
+  font-size:22px;
+  cursor:pointer;
+}
+
+/* FOOTER */
 
 footer{
-  background:#0b1422;
-  color:#aeb6c2;
-  text-align:center;
-  padding:25px;
+  background:#091322;
+  color:#aeb6c3;
+  padding:50px 25px 25px;
+}
+
+.footer-grid{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:40px;
+  padding-bottom:35px;
+}
+
+.footer-brand{
+  color:#fff;
+  font-size:22px;
+  font-weight:bold;
+  margin-bottom:10px;
+}
+
+.footer-brand span{
+  color:var(--gold);
+}
+
+.footer-column h4{
+  color:#fff;
+  margin-bottom:12px;
+}
+
+.footer-column a{
+  display:block;
+  color:#aeb6c3;
+  margin-bottom:7px;
   font-size:14px;
 }
 
-@media(max-width:850px){
+.footer-bottom{
+  max-width:1200px;
+  margin:auto;
+  padding-top:22px;
+  border-top:1px solid rgba(255,255,255,.1);
+  text-align:center;
+  font-size:13px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:950px){
+
+  nav{
+    gap:12px;
+  }
+
+  nav a{
+    font-size:12px;
+  }
+
+  .search-fields{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .properties,
+  .services,
+  .why-grid,
+  .testimonial-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .about-grid,
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:650px){
+
+  .navbar{
+    padding:15px;
+  }
 
   nav{
     display:none;
   }
 
   .hero{
-    min-height:560px;
+    min-height:570px;
+  }
+
+  .hero-content{
+    padding:60px 20px;
   }
 
   .hero-content h1{
-    font-size:42px;
+    font-size:40px;
+  }
+
+  .hero-content p{
+    font-size:17px;
+  }
+
+  .secondary-btn{
+    margin:10px 0 0;
+  }
+
+  .search-wrapper{
+    margin-top:-35px;
+  }
+
+  .search-box{
+    padding:20px;
   }
 
   .search-fields{
     grid-template-columns:1fr;
   }
 
-  .properties{
+  section{
+    padding:65px 20px;
+  }
+
+  .section-heading h2{
+    font-size:31px;
+  }
+
+  .properties,
+  .services,
+  .why-grid,
+  .testimonial-grid,
+  .quick-grid,
+  .calculator-grid,
+  .footer-grid{
     grid-template-columns:1fr;
   }
 
-  .about-grid{
-    grid-template-columns:1fr;
+  .about-text h2,
+  .contact-copy h2{
+    font-size:32px;
   }
 
-  .features-grid{
-    grid-template-columns:1fr;
+  .modal-box img{
+    height:230px;
   }
 }
 </style>
@@ -356,66 +875,126 @@ footer{
 <header>
   <div class="navbar">
 
-    <div class="logo">
+    <a href="#home" class="logo">
       PrimeNest <span>Realty</span>
-    </div>
+    </a>
 
     <nav>
       <a href="#home">Home</a>
       <a href="#properties">Properties</a>
+      <a href="#services">Services</a>
       <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact" class="nav-button">Contact</a>
     </nav>
 
   </div>
 </header>
 
+
+<!-- HERO -->
+
 <section class="hero" id="home">
 
   <div class="hero-content">
 
-    <h1>Find a Place You'll Be Proud to Call Home</h1>
+    <h1>Exceptional Properties. Better Possibilities.</h1>
 
     <p>
-      Discover exceptional homes, apartments, and investment properties
-      with PrimeNest Realty.
+      Discover homes, apartments and investment opportunities
+      with a real-estate experience built around your goals.
     </p>
 
-    <a href="#properties" class="btn">Explore Properties</a>
+    <a href="#properties" class="primary-btn">
+      Explore Properties
+    </a>
+
+    <a href="#contact" class="secondary-btn">
+      Contact Us
+    </a>
 
   </div>
 
 </section>
 
-<div class="search-box">
 
-  <h3>Find Your Property</h3>
+<!-- SEARCH -->
 
-  <div class="search-fields">
+<div class="search-wrapper">
 
-    <input type="text" id="location" placeholder="City or location">
+  <div class="search-box">
 
-    <select id="type">
-      <option value="">Property Type</option>
-      <option>House</option>
-      <option>Apartment</option>
-      <option>Villa</option>
-      <option>Condo</option>
-    </select>
+    <div class="search-title">
+      Find Your Property
+    </div>
 
-    <select id="price">
-      <option value="">Price Range</option>
-      <option>Under $300,000</option>
-      <option>$300,000 - $500,000</option>
-      <option>$500,000 - $1,000,000</option>
-      <option>$1,000,000+</option>
-    </select>
+    <div class="search-fields">
 
-    <button class="search-button" onclick="searchProperty()">Search</button>
+      <input
+        id="searchLocation"
+        type="text"
+        placeholder="City or location">
+
+      <select id="searchType">
+        <option value="">Property Type</option>
+        <option value="House">House</option>
+        <option value="Apartment">Apartment</option>
+        <option value="Villa">Villa</option>
+        <option value="Condo">Condo</option>
+      </select>
+
+      <select id="searchPurpose">
+        <option value="">Buy or Rent</option>
+        <option value="For Sale">For Sale</option>
+        <option value="For Rent">For Rent</option>
+      </select>
+
+      <select id="searchPrice">
+        <option value="">Price</option>
+        <option value="under300">Under $300K</option>
+        <option value="300500">$300K–$500K</option>
+        <option value="5001000">$500K–$1M</option>
+        <option value="over1000">$1M+</option>
+      </select>
+
+      <button class="search-btn" onclick="searchProperties()">
+        Search
+      </button>
+
+    </div>
 
   </div>
 
 </div>
+
+
+<!-- QUICK LINKS -->
+
+<section class="quick-links">
+
+  <div class="quick-grid">
+
+    <a href="#properties" class="quick-card">
+      <h3>Buy a Home</h3>
+      <p>Explore available properties for sale.</p>
+    </a>
+
+    <a href="#properties" class="quick-card">
+      <h3>Find a Rental</h3>
+      <p>Browse rental opportunities.</p>
+    </a>
+
+    <a href="#contact" class="quick-card">
+      <h3>Sell Your Property</h3>
+      <p>Talk with PrimeNest about your property.</p>
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- PROPERTIES -->
 
 <section id="properties">
 
@@ -423,88 +1002,209 @@ footer{
 
     <div class="section-heading">
       <h2>Featured Properties</h2>
-      <p>Explore selected properties available through PrimeNest Realty.</p>
+      <p>
+        Sample listings shown for website demonstration.
+        Replace these with your actual listings before launch.
+      </p>
     </div>
 
-    <div class="properties">
+    <div class="properties" id="propertyGrid">
 
-      <div class="property">
 
-        <img
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=85"
-          alt="Modern family home">
+      <!-- PROPERTY 1 -->
+
+      <article
+        class="property"
+        data-location="Miami Florida"
+        data-type="House"
+        data-purpose="For Sale"
+        data-price="450000">
+
+        <div class="property-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=85"
+            alt="Modern family home">
+
+          <div class="badge">FOR SALE</div>
+
+        </div>
 
         <div class="property-info">
 
           <h3>Modern Family Home</h3>
 
-          <div class="location">Miami, Florida</div>
-
-          <div class="price">$450,000</div>
-
-          <div class="features">
-            4 Bedrooms · 3 Bathrooms · 2,400 sq ft
+          <div class="location">
+            Miami, Florida
           </div>
 
-          <a href="#contact" class="btn">Request Details</a>
+          <div class="price">
+            $450,000
+          </div>
+
+          <div class="property-meta">
+            4 Beds · 3 Baths · 2,400 sq ft
+          </div>
+
+          <div class="property-buttons">
+
+            <button
+              class="details-btn"
+              onclick="showProperty(
+              'Modern Family Home',
+              'Miami, Florida',
+              '$450,000',
+              '4 Beds · 3 Baths · 2,400 sq ft',
+              'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85',
+              'A modern family residence with spacious living areas and a contemporary design.'
+              )">
+              Details
+            </button>
+
+            <a href="#contact" class="inquire-btn">
+              Inquire
+            </a>
+
+          </div>
 
         </div>
 
-      </div>
+      </article>
 
-      <div class="property">
 
-        <img
-          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85"
-          alt="Luxury apartment">
+      <!-- PROPERTY 2 -->
+
+      <article
+        class="property"
+        data-location="Los Angeles California"
+        data-type="Apartment"
+        data-purpose="For Sale"
+        data-price="325000">
+
+        <div class="property-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85"
+            alt="Luxury apartment">
+
+          <div class="badge">FOR SALE</div>
+
+        </div>
 
         <div class="property-info">
 
           <h3>Luxury Apartment</h3>
 
-          <div class="location">Los Angeles, California</div>
-
-          <div class="price">$325,000</div>
-
-          <div class="features">
-            2 Bedrooms · 2 Bathrooms · 1,450 sq ft
+          <div class="location">
+            Los Angeles, California
           </div>
 
-          <a href="#contact" class="btn">Request Details</a>
+          <div class="price">
+            $325,000
+          </div>
+
+          <div class="property-meta">
+            2 Beds · 2 Baths · 1,450 sq ft
+          </div>
+
+          <div class="property-buttons">
+
+            <button
+              class="details-btn"
+              onclick="showProperty(
+              'Luxury Apartment',
+              'Los Angeles, California',
+              '$325,000',
+              '2 Beds · 2 Baths · 1,450 sq ft',
+              'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85',
+              'A stylish apartment designed for comfortable modern living.'
+              )">
+              Details
+            </button>
+
+            <a href="#contact" class="inquire-btn">
+              Inquire
+            </a>
+
+          </div>
 
         </div>
 
-      </div>
+      </article>
 
-      <div class="property">
 
-        <img
-          src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1000&q=85"
-          alt="Luxury villa">
+      <!-- PROPERTY 3 -->
+
+      <article
+        class="property"
+        data-location="Orlando Florida"
+        data-type="Villa"
+        data-purpose="For Sale"
+        data-price="750000">
+
+        <div class="property-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1000&q=85"
+            alt="Luxury villa">
+
+          <div class="badge">FOR SALE</div>
+
+        </div>
 
         <div class="property-info">
 
           <h3>Luxury Villa</h3>
 
-          <div class="location">Orlando, Florida</div>
-
-          <div class="price">$750,000</div>
-
-          <div class="features">
-            5 Bedrooms · 4 Bathrooms · 3,200 sq ft
+          <div class="location">
+            Orlando, Florida
           </div>
 
-          <a href="#contact" class="btn">Request Details</a>
+          <div class="price">
+            $750,000
+          </div>
+
+          <div class="property-meta">
+            5 Beds · 4 Baths · 3,200 sq ft
+          </div>
+
+          <div class="property-buttons">
+
+            <button
+              class="details-btn"
+              onclick="showProperty(
+              'Luxury Villa',
+              'Orlando, Florida',
+              '$750,000',
+              '5 Beds · 4 Baths · 3,200 sq ft',
+              'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=85',
+              'A spacious luxury villa with generous living areas and premium features.'
+              )">
+              Details
+            </button>
+
+            <a href="#contact" class="inquire-btn">
+              Inquire
+            </a>
+
+          </div>
 
         </div>
 
-      </div>
+      </article>
 
+    </div>
+
+    <div class="no-results" id="noResults">
+      No matching properties were found. Try changing your search criteria.
     </div>
 
   </div>
 
 </section>
+
+
+<!-- ABOUT -->
 
 <section class="about" id="about">
 
@@ -516,45 +1216,30 @@ footer{
 
         <img
           src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=85"
-          alt="Real estate professional">
+          alt="Real estate property">
 
       </div>
 
       <div class="about-text">
 
-        <h2>Real Estate With a Higher Standard</h2>
+        <h2>A Better Way to Navigate Real Estate</h2>
 
         <p>
-          PrimeNest Realty is dedicated to helping buyers, sellers,
-          and investors navigate the real estate market with confidence.
+          PrimeNest Realty is being built around a simple idea:
+          property decisions should be informed, transparent and
+          focused on the client's objectives.
         </p>
 
         <p>
-          We believe finding the right property should be clear,
-          professional, and focused on your goals.
+          Whether you're purchasing a home, searching for a rental,
+          selling a property or exploring investment opportunities,
+          PrimeNest is designed to make the process easier to navigate.
         </p>
 
-        <a href="#contact" class="btn">Speak With Us</a>
+        <a href="#contact" class="primary-btn">
+          Start a Conversation
+        </a>
 
-      </div>
-
-    </div>
-
-    <div class="features-grid">
-
-      <div class="feature">
-        <h3>Trusted Service</h3>
-        <p>Professional guidance throughout your property journey.</p>
-      </div>
-
-      <div class="feature">
-        <h3>Quality Properties</h3>
-        <p>Carefully presented homes and properties for your consideration.</p>
-      </div>
-
-      <div class="feature">
-        <h3>Client Focused</h3>
-        <p>Your property goals remain at the center of every conversation.</p>
       </div>
 
     </div>
@@ -562,60 +1247,756 @@ footer{
   </div>
 
 </section>
+
+
+<!-- SERVICES -->
+
+<section id="services">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <h2>Our Services</h2>
+
+      <p>
+        Real-estate services designed around different stages of your property journey.
+      </p>
+
+    </div>
+
+    <div class="services">
+
+      <div class="service">
+        <div class="service-number">01</div>
+        <h3>Buying</h3>
+        <p>
+          Explore properties and receive guidance throughout the purchase process.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="service-number">02</div>
+        <h3>Selling</h3>
+        <p>
+          Prepare and present your property for prospective buyers.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="service-number">03</div>
+        <h3>Rentals</h3>
+        <p>
+          Search for rental opportunities based on your preferred criteria.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="service-number">04</div>
+        <h3>Investment</h3>
+        <p>
+          Explore real-estate opportunities with your investment objectives in mind.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="service-number">05</div>
+        <h3>Property Guidance</h3>
+        <p>
+          Get assistance understanding property options and next steps.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="service-number">06</div>
+        <h3>Market Information</h3>
+        <p>
+          Organize property and market information to support better decisions.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- WHY CHOOSE US -->
+
+<section>
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <h2>Why PrimeNest Realty?</h2>
+
+      <p>
+        A professional experience focused on clarity and service.
+      </p>
+
+    </div>
+
+    <div class="why-grid">
+
+      <div class="why-card">
+        <div class="icon">◆</div>
+        <h3>Professional</h3>
+        <p>
+          A clean, organized approach to property information and communication.
+        </p>
+      </div>
+
+      <div class="why-card">
+        <div class="icon">◇</div>
+        <h3>Client Focused</h3>
+        <p>
+          Property searches and conversations can be tailored to individual needs.
+        </p>
+      </div>
+
+      <div class="why-card">
+        <div class="icon">◆</div>
+        <h3>Clear Information</h3>
+        <p>
+          Property details are presented in an easy-to-understand format.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- TESTIMONIALS -->
+
+<section class="testimonials">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <h2>Client Experiences</h2>
+
+      <p>
+        Example testimonials shown for design purposes.
+      </p>
+
+    </div>
+
+    <div class="testimonial-grid">
+
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>
+          “PrimeNest made the property search process much easier to understand.”
+        </p>
+        <strong>Demo Client</strong>
+      </div>
+
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>
+          “The information was clear and the overall experience felt professional.”
+        </p>
+        <strong>Demo Client</strong>
+      </div>
+
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p>
+          “A straightforward approach that helped me understand my options.”
+        </p>
+        <strong>Demo Client</strong>
+      </div>
+
+    </div>
+
+    <div class="demo-note">
+      Testimonials above are placeholders and should be replaced with verified client reviews.
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- MORTGAGE CALCULATOR -->
+
+<section class="calculator">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <h2 style="color:white;">
+        Mortgage Payment Estimate
+      </h2>
+
+      <p style="color:#d7dce5;">
+        Use this calculator for an illustrative monthly payment estimate.
+      </p>
+
+    </div>
+
+    <div class="calculator-box">
+
+      <div class="calculator-grid">
+
+        <div>
+          <label>Home Price ($)</label>
+          <input id="homePrice" type="number" value="450000">
+        </div>
+
+        <div>
+          <label>Down Payment ($)</label>
+          <input id="downPayment" type="number" value="90000">
+        </div>
+
+        <div>
+          <label>Interest Rate (%)</label>
+          <input id="interestRate" type="number" value="6.5" step="0.1">
+        </div>
+
+      </div>
+
+      <br>
+
+      <div>
+        <label style="color:var(--navy);font-weight:bold;">
+          Loan Term (Years)
+        </label>
+
+        <select id="loanTerm" style="width:100%;padding:12px;border:1px solid var(--border);border-radius:4px;">
+          <option value="30">30 Years</option>
+          <option value="20">20 Years</option>
+          <option value="15">15 Years</option>
+        </select>
+      </div>
+
+      <br>
+
+      <button class="primary-btn" onclick="calculateMortgage()">
+        Calculate Payment
+      </button>
+
+      <div class="calculator-result" id="mortgageResult">
+        Enter your information and calculate an estimate.
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section id="faq">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <h2>Frequently Asked Questions</h2>
+
+      <p>
+        Common questions about working with a real-estate company.
+      </p>
+
+    </div>
+
+    <div class="faq">
+
+      <div class="faq-item">
+
+        <button class="faq-question" onclick="toggleFAQ(this)">
+          How do I inquire about a property?
+          <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+          Use the inquiry section on the website and provide the property you're interested in. A real contact system can be connected once PrimeNest's official contact details are available.
+        </div>
+
+      </div>
+
+      <div class="faq-item">
+
+        <button class="faq-question" onclick="toggleFAQ(this)">
+          Can I request a property viewing?
+          <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+          Yes. A viewing-request system can be connected to the website once the appropriate contact and scheduling service is configured.
+        </div>
+
+      </div>
+
+      <div class="faq-item">
+
+        <button class="faq-question" onclick="toggleFAQ(this)">
+          Do you help property sellers?
+          <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+          PrimeNest can provide seller-focused services such as property presentation, inquiries and buyer communication. Specific services should be confirmed by the business before publication.
+        </div>
+
+      </div>
+
+      <div class="faq-item">
+
+        <button class="faq-question" onclick="toggleFAQ(this)">
+          Can I search by location and price?
+          <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+          Yes. The property search above supports location, property type, listing purpose and price filtering.
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
 
 <section class="contact" id="contact">
 
   <div class="container">
 
-    <h2>Ready to Find Your Next Property?</h2>
+    <div class="contact-grid">
 
-    <p>
-      Tell us what you're looking for and our team can help you
-      take the next step.
-    </p>
+      <div class="contact-copy">
 
-    <div class="contact-info">
-      <div>📧 info@primenestrealty.com</div>
-      <div>📞 (305) 555-0198</div>
+        <h2>Let's Find the Right Property</h2>
+
+        <p>
+          Tell us what you're looking for and we'll create a clear
+          starting point for your property search.
+        </p>
+
+        <p>
+          <strong>Contact information:</strong><br>
+          Official phone and email will be added when available.
+        </p>
+
+        <p>
+          <strong>WhatsApp:</strong><br>
+          Business WhatsApp number will be connected when available.
+        </p>
+
+      </div>
+
+
+      <form
+        class="contact-form"
+        onsubmit="submitInquiry(event)">
+
+        <div class="form-group">
+
+          <label>Your Name</label>
+
+          <input
+            id="contactName"
+            type="text"
+            required
+            placeholder="Your full name">
+
+        </div>
+
+        <div class="form-group">
+
+          <label>Email</label>
+
+          <input
+            id="contactEmail"
+            type="email"
+            required
+            placeholder="Your email address">
+
+        </div>
+
+        <div class="form-group">
+
+          <label>Interested In</label>
+
+          <select id="contactInterest">
+
+            <option>Buying a property</option>
+            <option>Renting a property</option>
+            <option>Selling a property</option>
+            <option>Property investment</option>
+            <option>General inquiry</option>
+
+          </select>
+
+        </div>
+
+        <div class="form-group">
+
+          <label>Message</label>
+
+          <textarea
+            id="contactMessage"
+            required
+            placeholder="Tell us what you're looking for"></textarea>
+
+        </div>
+
+        <button class="primary-btn form-submit" type="submit">
+          Send Inquiry
+        </button>
+
+      </form>
+
     </div>
-
-    <a
-      class="btn"
-      href="mailto:info@primenestrealty.com?subject=Property Inquiry">
-      Contact PrimeNest Realty
-    </a>
 
   </div>
 
 </section>
 
+
+<!-- FOOTER -->
+
 <footer>
-  © 2026 PrimeNest Realty. All Rights Reserved.
+
+  <div class="footer-grid">
+
+    <div class="footer-column">
+
+      <div class="footer-brand">
+        PrimeNest <span>Realty</span>
+      </div>
+
+      <p>
+        Professional real-estate solutions designed around
+        informed property decisions.
+      </p>
+
+    </div>
+
+    <div class="footer-column">
+
+      <h4>Explore</h4>
+
+      <a href="#properties">Properties</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
+
+    </div>
+
+    <div class="footer-column">
+
+      <h4>Contact</h4>
+
+      <a href="#contact">Property Inquiry</a>
+      <a href="#contact">Sell a Property</a>
+      <a href="#contact">General Inquiry</a>
+
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 PrimeNest Realty. All Rights Reserved.
+  </div>
+
 </footer>
+
+
+<!-- PROPERTY MODAL -->
+
+<div class="modal" id="propertyModal">
+
+  <div class="modal-box">
+
+    <button
+      class="modal-close"
+      onclick="closeProperty()">
+      ×
+    </button>
+
+    <img id="modalImage" src="" alt="Property">
+
+    <div class="modal-content">
+
+      <h2 id="modalTitle"></h2>
+
+      <div id="modalLocation" class="location"></div>
+
+      <div id="modalPrice" class="modal-price"></div>
+
+      <p id="modalMeta"></p>
+
+      <br>
+
+      <p id="modalDescription"></p>
+
+      <br>
+
+      <a href="#contact" class="primary-btn" onclick="closeProperty()">
+        Request Information
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
 
 <script>
 
-function searchProperty(){
+/* PROPERTY SEARCH */
+
+function searchProperties(){
 
   const location =
-    document.getElementById("location").value.trim();
+    document.getElementById("searchLocation").value
+    .toLowerCase()
+    .trim();
 
   const type =
-    document.getElementById("type").value;
+    document.getElementById("searchType").value;
+
+  const purpose =
+    document.getElementById("searchPurpose").value;
 
   const price =
-    document.getElementById("price").value;
+    document.getElementById("searchPrice").value;
 
-  if(!location && !type && !price){
+  const properties =
+    document.querySelectorAll(".property");
 
-    alert("Please select a location, property type, or price range.");
+  let visible = 0;
+
+  properties.forEach(property => {
+
+    const propertyLocation =
+      property.dataset.location.toLowerCase();
+
+    const propertyType =
+      property.dataset.type;
+
+    const propertyPurpose =
+      property.dataset.purpose;
+
+    const propertyPrice =
+      Number(property.dataset.price);
+
+    let match = true;
+
+    if(location && !propertyLocation.includes(location)){
+      match = false;
+    }
+
+    if(type && propertyType !== type){
+      match = false;
+    }
+
+    if(purpose && propertyPurpose !== purpose){
+      match = false;
+    }
+
+    if(price === "under300" && propertyPrice >= 300000){
+      match = false;
+    }
+
+    if(price === "300500" &&
+       (propertyPrice < 300000 || propertyPrice > 500000)){
+      match = false;
+    }
+
+    if(price === "5001000" &&
+       (propertyPrice < 500000 || propertyPrice > 1000000)){
+      match = false;
+    }
+
+    if(price === "over1000" && propertyPrice <= 1000000){
+      match = false;
+    }
+
+    property.style.display =
+      match ? "block" : "none";
+
+    if(match){
+      visible++;
+    }
+
+  });
+
+  document.getElementById("noResults").style.display =
+    visible === 0 ? "block" : "none";
+
+  document.getElementById("properties")
+    .scrollIntoView({
+      behavior:"smooth"
+    });
+}
+
+
+/* PROPERTY DETAILS */
+
+function showProperty(
+  title,
+  location,
+  price,
+  meta,
+  image,
+  description
+){
+
+  document.getElementById("modalTitle").textContent = title;
+
+  document.getElementById("modalLocation").textContent = location;
+
+  document.getElementById("modalPrice").textContent = price;
+
+  document.getElementById("modalMeta").textContent = meta;
+
+  document.getElementById("modalImage").src = image;
+
+  document.getElementById("modalDescription").textContent = description;
+
+  document.getElementById("propertyModal").style.display = "block";
+
+  document.body.style.overflow = "hidden";
+}
+
+
+function closeProperty(){
+
+  document.getElementById("propertyModal").style.display = "none";
+
+  document.body.style.overflow = "auto";
+}
+
+
+window.onclick = function(event){
+
+  const modal =
+    document.getElementById("propertyModal");
+
+  if(event.target === modal){
+    closeProperty();
+  }
+
+};
+
+
+/* FAQ */
+
+function toggleFAQ(button){
+
+  const item =
+    button.parentElement;
+
+  item.classList.toggle("active");
+
+  const symbol =
+    button.querySelector("span");
+
+  symbol.textContent =
+    item.classList.contains("active")
+    ? "−"
+    : "+";
+}
+
+
+/* MORTGAGE CALCULATOR */
+
+function calculateMortgage(){
+
+  const price =
+    Number(document.getElementById("homePrice").value);
+
+  const down =
+    Number(document.getElementById("downPayment").value);
+
+  const annualRate =
+    Number(document.getElementById("interestRate").value);
+
+  const years =
+    Number(document.getElementById("loanTerm").value);
+
+  const loan =
+    price - down;
+
+  if(loan <= 0 || annualRate < 0){
+
+    document.getElementById("mortgageResult").textContent =
+      "Please enter valid numbers.";
 
     return;
   }
 
+  const monthlyRate =
+    annualRate / 100 / 12;
+
+  const payments =
+    years * 12;
+
+  let monthly;
+
+  if(monthlyRate === 0){
+
+    monthly =
+      loan / payments;
+
+  }else{
+
+    monthly =
+      loan *
+      (
+        monthlyRate *
+        Math.pow(1 + monthlyRate, payments)
+      ) /
+      (
+        Math.pow(1 + monthlyRate, payments) - 1
+      );
+
+  }
+
+  document.getElementById("mortgageResult").textContent =
+    "Estimated principal and interest payment: $" +
+    monthly.toLocaleString(undefined,{
+      minimumFractionDigits:2,
+      maximumFractionDigits:2
+    }) +
+    " per month.";
+
+}
+
+
+/* CONTACT FORM */
+
+function submitInquiry(event){
+
+  event.preventDefault();
+
+  const name =
+    document.getElementById("contactName").value;
+
   alert(
-    "Thank you for your search. PrimeNest Realty will help you find matching properties."
+    "Thank you, " +
+    name +
+    ". Your inquiry has been prepared. A real email/form service will be connected when PrimeNest Realty's official contact details are available."
   );
+
 }
 
 </script>
